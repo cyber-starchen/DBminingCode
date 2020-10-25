@@ -2,4 +2,5 @@ learn git
 version rollback
 learn vision control
 learn stage
-git tracks changes
+git tracks changes of files
+
