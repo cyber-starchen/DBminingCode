@@ -40,7 +40,8 @@ per=float(input("enter %\n"))
 pattern=pyfpgrowth.find_frequent_patterns(resultSet,math.ceil(counter*per))
 
 p1= sorted(pattern.items(),key = lambda x:x[1],reverse = True)
-output.write("Mining patterns from "+file+"\n")
+# output.write("Mining patterns from "+file+"\n")
+output.write("Mining patterns from "+file+",threshold is"+str(per)+ "\n")
 output.write("Frequent patterns: \n")
 for x in range(0,len(p1)):
     output.write(str(p1[x])+"\n")
