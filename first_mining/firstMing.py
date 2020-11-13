@@ -6,12 +6,13 @@ import csv
 import math
 
 
-file='first_mining_sample.csv'
+# file='first_mining_sample.csv'
+file='Cleaned_data_v2.csv'
 output=open(file+'_output.txt',"w")
 counter=0
 # per=0.5
 
-with open(file) as f:
+with open(file,'r',encoding='utf-8') as f:
     f_csv=csv.reader(f)
     resultSet=[]
     header=[]
@@ -23,11 +24,13 @@ with open(file) as f:
         else:
             counter=counter+1
             for i in range(len(row)):
-                if('-1' == row[i]):
-                    result.append(header[i]+'=-1')
-                elif('Unknown'.lower() in row[i].lower()):
-                    result.append(header[i]+row[i])
-                else:
+                # if('-1' == row[i]):
+                    # result.append(header[i]+'=-1')
+                # elif('Unknown'.lower() in row[i].lower()):
+                    # result.append(header[i]+row[i])
+                # else:
+                    # result.append(row[i])
+                if('-1'!=row[i]):
                     result.append(row[i])
         resultSet.append(result)
                 
